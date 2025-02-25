@@ -38,8 +38,8 @@ else:
 continue
 
         #file details
-        st.write("Preview the head of the Dataframe")
-        st.dataframe(df.head())
+         st.write("Preview the head of the Dataframe")
+         st.dataframe(df.head())
 
         #data cleaning options
         st.subheader("Data Cleaning Options")
