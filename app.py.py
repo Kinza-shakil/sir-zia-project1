@@ -1,5 +1,5 @@
 import streamlit as streamlit
-impport pandas as pandas
+import pandas as pandas
 import os
 import io import BytesIO
 
