@@ -47,18 +47,18 @@ if st.checkbox(f"clean data for {file.name}"):
     
  with col1:
  if st.button(f"Remove duplicates from the file : {file.name}"):
-                    df.drop_duplicates(inplace=True)
-                    st.write("Duplicates removed!")
+ df.drop_duplicates(inplace=True)
+ st.write("Duplicates removed!")
 
-                    with col2:
-                        if st.button(f"Fill missing values for {file.name}"):
-                            numeric_cols = df.select_dtypes(includes=['number']).columns
-                            df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
-                            st.write("Missing values have been filled!")
+ with col2:
+ if st.button(f"Fill missing values for {file.name}"):
+ numeric_cols = df.select_dtypes(includes=['number']).columns
+ df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
+ st.write("Missing values have been filled!")
 
-        st.subheader("select columns to keep")
-        columns = st.multiselect(f"choose columns for {file.name}", df.columns, default=df.columns)
-        df = df[columns]
+ st.subheader("select columns to keep")
+ columns = st.multiselect(f"choose columns for {file.name}", df.columns, default=df.columns)
+ df = df[columns]
 
 
         #data visualization
