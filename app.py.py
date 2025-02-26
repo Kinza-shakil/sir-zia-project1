@@ -40,13 +40,13 @@ continue
 st.write("Preview the head of the Dataframe")
 st.dataframe(df.head())
         
-        #data cleaning options
-        st.subheader("Data Cleaning Options")
-        if st.checkbox(f"clean data for {file.name}"):
-            col1, col2 = st.columns(2)
-
-            with col1:
-                if st.button(f"Remove duplicates from the file : {file.name}"):
+#data cleaning options
+st.subheader("Data Cleaning Options")
+if st.checkbox(f"clean data for {file.name}"):
+    col1, col2 = st.columns(2)
+    
+ with col1:
+ if st.button(f"Remove duplicates from the file : {file.name}"):
                     df.drop_duplicates(inplace=True)
                     st.write("Duplicates removed!")
 
